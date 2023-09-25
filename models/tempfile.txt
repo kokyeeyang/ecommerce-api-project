@@ -1,0 +1,17 @@
+const agg = [
+  {
+    '$match': {
+      'product': new ObjectId('64be51d24ef2a4b805a84f79')
+    }
+  }, {
+    '$group': {
+      '_id': null, 
+      'averageRating': {
+        '$avg': '$rating'
+      }, 
+      'numberOfReviews': {
+        '$sum': 1
+      }
+    }
+  }
+];
