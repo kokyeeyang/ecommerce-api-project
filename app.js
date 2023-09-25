@@ -38,8 +38,6 @@ app.use('/api/v1/products', productsRouter);
 app.use('/api/v1/reviews', reviewRouter)
 app.use('/api/v1/orders', orderRouter)
 
-app.use(morgan('tiny'))
-
 app.get('/',(req,res)=>{
     res.send('ecommerce api')
 })
